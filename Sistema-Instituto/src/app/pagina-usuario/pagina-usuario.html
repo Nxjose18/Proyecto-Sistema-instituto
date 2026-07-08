@@ -1,4 +1,46 @@
-<p>pagina-usuario works!</p>
-<button mat-raised-button (click)="cerrarSesion()">
-    Cerrar sesión
-</button>
+<section class="section_usuario">
+    
+<div id="panel_lateralOpc">
+    <div id="informacion_usuario">
+        <mat-icon class="icono-usuario">account_circle</mat-icon>
+        <p>Jose Andres</p>
+        <button mat-raised-button (click)="cerrarSesion()">
+            Cerrar sesión
+        </button>
+    </div>
+    <div id="contenedor_opciones">
+        <button 
+        [ngClass]="{'activo': opcionSeleccionada === 'cursos'}" 
+        (click)="seleccionar('cursos')">
+        <mat-icon class="icono-libro">menu_book</mat-icon>
+        Mis cursos
+        </button>
+
+        <button 
+        [ngClass]="{'activo': opcionSeleccionada === 'historial'}" 
+        (click)="seleccionar('historial')">
+        <mat-icon class="icono-historial">history_edu</mat-icon>
+        Historial Académico
+        </button>
+
+        <button 
+        [ngClass]="{'activo': opcionSeleccionada === 'datos'}" 
+        (click)="seleccionar('datos')">
+        <mat-icon class="icono-datos">manage_accounts</mat-icon>
+        Mis datos
+        </button>
+    </div>
+</div>
+<div id="panel_lateralCont">
+    <div id="logo_cabecera">
+        <img src="imagenes/logo-completo.png" alt="logo">
+    </div>
+    <div id="contendor_cur">
+        <div id="contenedor_misCu"></div>
+        <div id="contenedor_Inscr"></div>        
+    </div>
+
+
+</div>
+
+</section>

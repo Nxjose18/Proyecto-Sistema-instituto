@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth';
 import { Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { CommonModule } from '@angular/common';
 
 @Component({
    standalone: true,
   selector: 'app-pagina-usuario',
-  imports: [],
+  imports: [MatIconModule,CommonModule],
   templateUrl: './pagina-usuario.html',
   styleUrl: './pagina-usuario.css',
 })
@@ -22,4 +24,11 @@ cerrarSesion(){
     this.router.navigate(['/']);
 
 }
+
+ opcionSeleccionada: string = 'cursos'; 
+
+  // Función para cambiar la pestaña activa
+  seleccionar(opcion: string) {
+    this.opcionSeleccionada = opcion;
+  }
 }
