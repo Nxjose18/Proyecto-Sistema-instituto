@@ -162,3 +162,36 @@
 ::ng-deep .campo .mat-mdc-form-field-subscript-wrapper{
     display:none;
 }
+
+/* ===================================
+   CELULARES PEQUEÑOS
+===================================*/
+
+@media (max-width:480px){
+
+    #contenedor_login{
+        width:95%;
+        padding:20px 15px;
+        flex-direction: column;
+    }
+
+    #formulario_logo img{
+        width:150px;
+    }
+
+    #formulario_login_btn button{
+        font-size:18px;
+        height:45px;
+    }
+    
+    .section_inicioYregistro{
+        flex-direction: column;
+    }
+    #inicio_img{
+        width: 100%;
+    }
+    #inicio_cont{
+        width: 100%;
+    }
+
+}
